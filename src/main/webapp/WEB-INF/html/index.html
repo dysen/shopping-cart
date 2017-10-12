@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="AngularSpringApp">
+<head>
+    <meta charset="utf-8"/>
+    <title>Service App</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <script src="resources/js/lib/angular/angular.js"></script>
+    <script src="resources/js/app.js"></script>
+    <script src="resources/js/services.js"></script>
+    <script src="resources/js/controllers/RailwayStationController.js"></script>
+    <script src="resources/js/controllers/CarController.js"></script>
+    <script src="resources/js/controllers/TrainController.js"></script>
+    <script src="resources/js/controllers/ItemController.js"></script>
+    <script src="resources/js/controllers/BasketController.js"></script>
+    <script src="resources/js/filters.js"></script>
+    <script src="resources/js/directives.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <!--<script language="JavaScript" type="text/javascript" src="resources/js/jquery-ui.min.js"></script>-->
+    <!--<script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!--<script>(function($){-->
+        <!--$(function(){-->
+
+            <!--$('.button-collapse').sideNav();-->
+
+        <!--}); // end of document ready-->
+    <!--})(jQuery); // end of jQuery name space</script>-->
+
+</head>
+<body>
+<!--&lt;!&ndash;<div class="row" style="width: 100%;">&ndash;&gt;-->
+    <!--<div id="wrapper">-->
+    <!--<ul class="menu">-->
+    <!--&lt;!&ndash;<li><a href="#/cars">Cars</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/trains">Trains</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="#/railwaystationsystations">Railway Station</a></li>&ndash;&gt;-->
+    <!--<li><a href="#/items">Items</a></li>-->
+    <!--<li><a href="#/basket">Basket</a></li>-->
+    <!--</ul>-->
+    <!--<hr class="" />-->
+    <!--<div ng-view=""></div>-->
+    <!--</div>-->
+
+
+<header>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper"> <a href="#" class="brand-logo">Logo</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#/items">Online Store</a></li>
+                    <li><a href="#/basket">Basket</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+    </div>
+    <!--&lt;!&ndash; Move the sidenav outside of .navbar-fixed &ndash;&gt;-->
+    <!--<ul class="nav-mobile" id="mobile-demo">-->
+        <!--<li><a href="#/items">Online Store</a></li>-->
+        <!--<li><a href="#/basket">Basket</a></li>-->
+    <!--</ul>-->
+</header>
+<div ng-view=""></div>
+
+
+</body>
+</html>

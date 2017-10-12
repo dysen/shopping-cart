@@ -1,0 +1,100 @@
+<main>
+    <div class="container">
+        <h3 style="margin-left:100px;">BASKET</h3>
+
+        <p>BASKET GOES HERE</p>
+
+        <div class="row">
+            <div class="col s12 m9 l10">
+                <div id="items" class="section scrollspy">
+                    <div class="row">
+                        <h3 ng-show="basket.basketLineItems.length == 0">You basket is empty</h3>
+                        <table class="bordered centered"
+                               style="width:700px; margin-left: 100px;"
+                               ng-show="basket.basketLineItems.length > 0">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in basket.basketLineItems">
+                                <!--<td  style="width:70px;text-align:center;"><button class="btn btn-mini btn-danger" ng-click="removeCar(car)">Remove</button></td>-->
+                                <td>{{item.item.id}}</td>
+                                <td>{{item.item.name}}</td>
+                                <td>{{item.item.description}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.amount}}</td>
+                                <td><a class="btn-floating btn-large waves-effect waves-light red" ng-click="removeItem(item.item)">
+                                    <i class="material-icons">remove_shopping_cart
+                                </i></a></td>
+
+                                <!--<td  style="width:70px;text-align:center;"><button class="btn btn-mini btn-default" ng-click="addItem(item)">Add</button></td>-->
+                            </tr>
+                            <!--<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>-->
+
+                            <!--<td><a class="btn-floating halfway-fab waves-effect waves-light red" ng-click="removeItem(item);fetchBasket()">-->
+
+                            <!--{{basket.message}}-->
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div id="total">
+                    <table class="bordered centered" style="width:700px; margin-left: 100px;" border="5"
+                           ng-show="basket.basketLineItems.length > 0">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class=" right-align">Subtotal:</div>
+                            </td>
+                            <td>
+                                <div class=" right-align">${{basket.subTotal}}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class=" right-align">Shipping cost:</div>
+                            </td>
+                            <td>
+                                <div class=" right-align">${{basket.delivery}}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class=" right-align">Total:</div>
+                            </td>
+                            <td>
+                                <div class=" right-align">${{basket.totalAmount}}</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</main>
+
+<!--</div>-->
+<!--{"delivery":15,"subTotal":7,"totalAmount":22,"basketLineItems":-->
+<!--[{"item":{"id":1,-->
+<!--"name":"Box",-->
+<!--"description":"Description",-->
+<!--"price":1},"quantity":0,"price":1,"amount":0}],"message":"You can order more items for $13 to get free delivery"}-->
